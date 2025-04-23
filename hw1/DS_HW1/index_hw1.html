@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HW1-Mrunali Katta</title>
+</head>
+<body>
+    <h1>Blog Title</h1>
+    <form id="myBlogForm">
+        <label for="myBlogTitle">Blog Title*</label><br>
+        <input type="text" id="myBlogTitle" placeholder="Enter the title of your blog" required autofocus><br><br>
+
+        <label for="userName">Author Name*</label><br>
+        <input type="text" id="userName" placeholder="Enter your name" required><br><br>
+
+        <label for="userEmailAddress">Author Email Address*</label><br>
+        <input type="email" id="userEmailAddress" placeholder="Enter your email" required><br><br>
+
+        <label for="myBlogContent">Content*</label><br>
+        <textarea id="myBlogContent" placeholder="Write your content here…" required></textarea><br><br>
+
+        <label for="myBlogCategories">Category*</label><br>
+        <select id="myBlogCategories">
+            <option value="Technology">Technology</option>
+            <option value="Lifestyle">Lifestyle</option>
+            <option value="Travel">Travel</option>
+            <option value="Education">Education</option>
+        </select><br><br>
+
+        <input type="checkbox" id="terms">
+        <label for="terms">I agree to the terms and conditions</label><br><br>
+        <button type="submit">Publish Blog</button>
+    </form>
+
+    <script src="blog_hw1.js"></script>
+</body>
+</html>
