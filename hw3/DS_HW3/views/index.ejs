@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to ADS-SJSU</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /*font */
+        body {
+            font-family: 'Arial', sans-serif; 
+            color: #333;
+        }
+
+        .navbar-custom {
+            background-color: #0055a2; 
+            padding: 20px 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+
+        .navbar-custom .navbar-brand {
+            color: #ffffff;
+            font-size: 22px;
+            font-weight: bold;
+            font-family: 'Arial', sans-serif;
+            text-decoration: none;
+            letter-spacing: 0.5px;
+        }
+
+        .navbar-custom .nav-link {
+            color: #ffffff;
+            font-size: 18px;
+            margin-left: 20px;
+            text-decoration: none;
+            font-weight: bold;
+            text-transform: capitalize; 
+        }
+
+        .navbar-custom .nav-link:hover {
+            color: #ffd700; 
+        }
+
+        .navbar-gradient {
+            height: 6px;
+            background: linear-gradient(to right, #0055a2, #ffd700);
+        }
+
+        .container-content {
+            margin-top: 50px;
+            text-align: center;
+        }
+
+        .welcome-text {
+            font-size: 40px; 
+            font-weight: bold;
+            color: black;
+            margin-top: 25px;
+        }
+
+        .department-title {
+            font-size: 22px; 
+            color: black;
+            font-weight: normal;
+            margin-top: 10px;
+        }
+
+        /*overview*/
+        .overview-section {
+            text-align: left;
+            max-width: 900px;
+            margin: 60px auto;
+            font-size: 18px;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .overview-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #002a5c;
+            margin-bottom: 10px;
+        }
+
+        .btn-custom {
+            background-color: #0055a2;
+            color: white;
+            font-size: 18px;
+            padding: 10px 20px;
+            border: none;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .btn-custom:hover {
+            background-color: #003f7d;
+        }
+    </style>
+</head>
+<body>
+
+    <!--the top navbar -->
+    <nav class="navbar navbar-expand-lg navbar-custom">
+        <div class="container">
+            <a class="navbar-brand">San José State University</a>
+            <div class="navbar-nav ms-auto">
+                <% if (!user) { %>
+                    <a class="nav-link" href="/login">Login</a>
+                <% } else { %>
+                    <a class="nav-link" href="/dashboard">Dashboard</a>
+                    <a class="nav-link" href="/logout">Logout</a>
+                <% } %>
+            </div>
+        </div>
+    </nav>
+
+    <div class="navbar-gradient"></div>
+
+    <!-- welcome section -->
+    <div class="container container-content">
+        <h1 class="welcome-text">Welcome to the ADS-SJSU</h1>
+        <p class="department-title">Department of Applied Data Science</p>
+
+        <!--the overview section -->
+        <div class="overview-section">
+            <h2 class="overview-title">Overview</h2>
+            <p>The Department of Applied Data Science (ADS) equips students with cutting-edge skills in data analytics, machine learning, deep learning, and generative AI to meet the growing demand for data science expertise. Located in Silicon Valley, the department offers hands-on learning, internship opportunities, and access to state-of-the-art GPU labs for advanced AI teaching.</p>
+            <p>With internships at top tech firms and collaborations with industry leaders, the Department of ADS prepares students for impactful careers in the evolving tech landscape.</p>
+        </div>
+
+        <% if (!user) { %>
+            <a href="/login" class="btn btn-custom">Login</a>
+        <% } else { %>
+            <div>
+                <a href="/dashboard" class="btn btn-success">Dashboard</a>
+                <a href="/logout" class="btn btn-danger">Logout</a>
+            </div>
+        <% } %>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

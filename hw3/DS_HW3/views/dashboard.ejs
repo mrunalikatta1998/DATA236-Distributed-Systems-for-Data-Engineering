@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - ADS-SJSU</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            color: #333;
+            background-color: #f8f9fa;
+            overflow-x: hidden; 
+        }
+
+        /*top navbar style*/
+        .navbar-custom {
+            background-color: #0055a2;
+            padding: 20px 0;
+        }
+
+        .navbar-custom .navbar-brand {
+            color: #ffffff;
+            font-size: 22px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .navbar-custom .nav-link {
+            color: #ffffff;
+            font-size: 18px;
+            margin-left: 20px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .navbar-custom .nav-link:hover {
+            color: #ffd700; 
+        }
+
+        .navbar-gradient {
+            height: 6px;
+            background: linear-gradient(to right, #0055a2, #ffd700);
+        }
+
+        .container-content {
+            text-align: center;
+            padding: 40px 0;
+        }
+
+        .welcome-text {
+            font-size: 36px;
+            font-weight: bold;
+            color: black;
+            margin-top: 25px;
+        }
+
+        .course-title {
+            font-size: 22px;
+            color: #002a5c;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        /* course boxes styles */
+        .course-box {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .course-name {
+            font-size: 18px;
+            font-weight: bold;
+            color: #0055a2;
+        }
+
+        .course-desc {
+            font-size: 16px;
+            color: #555;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-custom">
+        <div class="container">
+            <a class="navbar-brand">San José State University</a>
+            <div class="navbar-nav ms-auto">
+                <a class="nav-link" href="#contact">Contact Us</a> <!--about us link on navbar -->
+                <a class="nav-link" href="/logout">Logout</a> <!--logout link on the navbar-->
+            </div>
+        </div>
+    </nav>
+
+    <div class="navbar-gradient"></div>
+
+    <!--welcome line-->
+    <div class="container container-content">
+        <h1 class="welcome-text">Welcome, <%= user.username %>!</h1>
+        <p class="department-title">Explore our available courses</p>
+    </div>
+
+    <div class="container">
+        <h2 class="course-title">Courses Offered</h2>
+        
+        <div class="row">
+            <!-- maths 1-->
+            <div class="col-md-6">
+                <div class="course-box">
+                    <p class="course-name">DATA 220 - Mathematical Methods for Data Analytics</p>
+                    <p class="course-desc">Advanced Mathematical and statistical methods for data analytics, machine learning, and time series analysis; selected topics from probability, statistics, linear algebra, and mathematical optimization; programming for numerical implementation of mathematical and statistical algorithms.
+            </p>
+                </div>
+            </div>
+
+            <!--db 2-->
+            <div class="col-md-6">
+                <div class="course-box">
+                    <p class="course-name">DATA 225 - Database Systems for Analytics</p>
+                    <p class="course-desc">Design operational and analytical databases with relational, dimensional, and NoSQL data models; deploy data analytics applications with SQL programming and data access APIs; perform data cleansing, extract, transform, and load (ETL) operations for data warehouses and online analytical processing (OLAP).
+                        </p>
+                </div>
+            </div>
+
+            <!--dw 3-->
+            <div class="col-md-6">
+                <div class="course-box">
+                    <p class="course-name">DATA 226 - Data Warehouse and Pipeline</p>
+                    <p class="course-desc">Design analytical databases with dimensional and NoSQL data models; deploy data analytics applications with SQL programming; perform data cleansing, extract, transform, and load (ETL) operations for data warehouses; build data pipeline; and perform online analytical processing (OLAP).
+                        </p>
+                </div>
+            </div>
+
+            <!--Big data 4-->
+            <div class="col-md-6">
+                <div class="course-box">
+                    <p class="course-name">DATA 228 - Big Data Technologies and Applications</p>
+                    <p class="course-desc">Leverage emerging big data systems, technologies, and applications to transform data into knowledge through capturing, managing, analyzing, and understanding large data at volumes and rates; design analytical solutions in data warehouse, big data databases, data streaming, security and governance.
+                        </p>
+                </div>
+            </div>
+
+            <!--DV 5-->
+            <div class="col-md-6">
+                <div class="course-box">
+                    <p class="course-name">DATA 230 - Business Intelligence and Data Visualization</p>
+                    <p class="course-desc">Learn data visualization as an analytical tool and interactive dashboards; apply theories and design principles in the development of business intelligence and visualizations; and create data dashboards using BI tools, software packages, and environments.
+                    </p>
+                </div>
+            </div>
+
+            <!--DS 6-->
+            <div class="col-md-6">
+                <div class="course-box">
+                    <p class="course-name">DATA 236 - Distributed Systems for Data Engineering</p>
+                    <p class="course-desc">Learn big data distributed systems, large scale distributed systems framework, distributed messaging framework, distributed system building with cloud technologies, and REST (Representational State Transfer) service development and deployment.
+                        </p>
+                </div>
+            </div>
+
+            <!--DM 7-->
+            <div class="col-md-6">
+                <div class="course-box">
+                    <p class="course-name">DATA 240 - Data Mining and Analytics</p>
+                    <p class="course-desc">Learn concepts, tools, and algorithms for data mining, statistical modeling, implementation techniques, and applications of data mining with a focus on data mining functions: pattern discovery, cluster analysis, exploratory data analysis, and anomaly detection with real-world examples. 
+                    </p>
+                </div>
+            </div>
+
+            <!--ml 8 -->
+            <div class="col-md-6">
+                <div class="course-box">
+                    <p class="course-name">DATA 245 - Machine Learning Technologies</p>
+                    <p class="course-desc">Learn concepts, techniques and algorithms in machine learning for the development of real-world applications; build, evaluate and refine machine learning models to predict patterns from trained data sets; apply supervised and unsupervised learning methodologies in solving classification and regression problems.
+                        </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--the contact us section -->
+    <div class="container text-center mt-5" id="contact">
+        <h2 class="course-title">Department of Applied Data Science</h2>
+        <p><strong>Office:</strong> Interdisciplinary Science Building 850</p>
+        <p><strong>Telephone:</strong> 408-924-2639</p>
+        <p><strong>Email:</strong> 
+            <a href="mailto:applied-data-science@sjsu.edu" style="color: #0055a2; text-decoration: none;">applied-data-science@sjsu.edu</a></p>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
