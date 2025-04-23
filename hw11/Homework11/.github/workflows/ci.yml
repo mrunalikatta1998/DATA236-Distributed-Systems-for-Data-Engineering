@@ -1,12 +1,9 @@
 name: MLOps CI Workflow
+# Triggering CI
 
 on:
   push:
-    paths:
-      - 'hw11/**'
   pull_request:
-    paths:
-      - 'hw11/**'
 
 jobs:
   test:
